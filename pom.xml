@@ -35,10 +35,10 @@
     </plugins>
   </build>
   <distributionManagement>
-  <repository>
-     <id>localnexus</id>
-     <name>my-app</name>
-     <url>http://172.16.238.79:8082/repository/test-repo/</url>
-   </repository>
-/distributionManagement> 
+    <repository>
+      <id>localnexus</id>
+      <name>my-app</name>
+      <url>http://172.16.238.79:8082/repository/test-repo/</url>
+    </repository>
+  </distributionManagement> 
 </project>
