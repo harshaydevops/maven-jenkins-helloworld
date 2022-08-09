@@ -40,7 +40,7 @@ jobs:
         push: true
         tags: ${{ secrets.DOCKERHUB_USERNAME }}/helloworld:1
         
-    - uses: kubernetes-admin/k8s-set-context@kubernetes
+    - uses: k8s-actions/k8s-set-context@v2
       with:
         kubeconfig: ${{ secrets.KUBECONFIG }}
       id: login
