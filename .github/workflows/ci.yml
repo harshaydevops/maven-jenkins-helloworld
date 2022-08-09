@@ -42,7 +42,9 @@ jobs:
         
     - uses: jtalk/k8s-deploy@v2
       with:
+        method: kubeconfig
         kubeconfig: ${{ secrets.KUBECONFIG }}
+        context: kubernetes-admin@kubernetes
       id: login
       
     - name: Create Namespace
