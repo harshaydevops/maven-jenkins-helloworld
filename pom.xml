@@ -34,11 +34,4 @@
       </plugin>
     </plugins>
   </build>
-#  <distributionManagement>
-#    <snapshotRepository>
-#      <id>localnexus</id>
-#      <name>my-app</name>
-#      <url>http://172.16.238.79:8082/repository/test-repo/</url>
-#    </snapshotRepository>
-#  </distributionManagement> 
 </project>
