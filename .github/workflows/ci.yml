@@ -40,17 +40,9 @@ jobs:
         push: true
         tags: ${{ secrets.DOCKERHUB_USERNAME }}/helloworld:1
         
-    - uses: jtalk/k8s-deploy@v2
+    - uses: danielr1996/kubectl-action@1.0.0
+      name: Create Namespace
       with:
-        method: kubeconfig
         kubeconfig: ${{ secrets.KUBECONFIG }}
-        context: kubernetes-admin@kubernetes
-      id: login
-      
-    - name: Create Namespace
-      run: |
-        namespacePresent=`kubectl get ns | grep demo | wc -l`
-        if [ $namespacePresent -eq 0 ]
-        then
-          echo `kubectl create ns demo`
-        fi
+        args: create namespace demo
+        
