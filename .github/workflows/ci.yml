@@ -40,9 +40,10 @@ jobs:
         push: true
         tags: ${{ secrets.DOCKERHUB_USERNAME }}/helloworld:1
         
-    - uses: danielr1996/kubectl-action@1.0.0
-      name: Create Namespace
+    - uses: actions-hub/kubectl@master
+      name: List Namespace
+      env:
+        KUBE_CONFIG: ${{ secrets.KUBECONFIG }}
       with:
-        kubeconfig: ${{ secrets.KUBECONFIG }}
-        args: create namespace demo
+        args: get namespace
         
